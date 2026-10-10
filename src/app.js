@@ -541,8 +541,7 @@ shareButton.addEventListener('click', handleShare);
 // --- Pinned Cities Functions ---
 async function loadPinnedCities() {
     try {
-        const response = await fetch('api/load_pinned.php');
-        pinnedCities = await response.json();
+        pinnedCities = JSON.parse(localStorage.getItem('weatherify_pinned_cities') || '[]');
         renderPinnedCities();
     } catch (e) {
         console.error('Failed to load pinned cities:', e);
@@ -551,11 +550,7 @@ async function loadPinnedCities() {
 
 async function savePinnedCities() {
     try {
-        await fetch('api/save_pinned.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ cities: pinnedCities })
-        });
+        localStorage.setItem('weatherify_pinned_cities', JSON.stringify(pinnedCities));
     } catch (e) {
         console.error('Failed to save pinned cities:', e);
     }
