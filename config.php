@@ -1,4 +1,4 @@
-```php
+
 <?php
 /**
  * Local defaults are retained for XAMPP.
@@ -44,4 +44,3 @@ class Database {
         return $this->conn->real_escape_string($string);
     }
 }
-```
