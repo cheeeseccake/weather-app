@@ -26,7 +26,7 @@
         }
     </script>
     <!-- Custom Styles for Typography, GIF Container, and Dynamic Backgrounds -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body class="flex flex-col items-center p-4 sm:p-8 transition-colors duration-1000">
@@ -44,7 +44,7 @@
 
         <!-- Search Input -->
         <div class="flex gap-2">
-            <button onclick="window.location.href='dashboard.php'" style="background-color: #1C352D; color: white;" class="font-semibold px-4 py-3 rounded-xl hover:opacity-80 transition duration-150 shadow-md active:shadow-inner active:translate-y-0.5">
+            <button onclick="window.location.href='/dashboard'" style="background-color: #1C352D; color: white;" class="font-semibold px-4 py-3 rounded-xl hover:opacity-80 transition duration-150 shadow-md active:shadow-inner active:translate-y-0.5">
                 Dashboard
             </button>
             <div class="relative flex-1">
@@ -232,7 +232,7 @@
         Report copied to clipboard!
     </div>
 
-    <script src="app.js"></script>
+    <script src="/src/app.js"></script>
 </body>
 </html>
 </body>
