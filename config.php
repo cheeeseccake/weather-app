@@ -12,7 +12,7 @@ class Database {
         $port = (int) (getenv('DB_PORT') ?: 3306);
         $user = getenv('DB_USER') ?: 'root';
         $password = getenv('DB_PASSWORD') ?: '';
-        $name = getenv('DB_NAME') ?: 'weather_app';
+        $name = getenv('DB_NAME') ?: 'weatherify';
 
         $this->conn = new mysqli($host, $user, $password, $name, $port);
         if ($this->conn->connect_error) {
