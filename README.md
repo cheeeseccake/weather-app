@@ -43,5 +43,5 @@ The `config.php` keeps local XAMPP defaults for development, but uses the enviro
 
 - Pinned cities are stored in browser `localStorage` because the repository references pinned-city PHP endpoints that are not present in the current repository.
 - The browser-side OpenWeather and Giphy keys are visible to visitors. Review the providers' restrictions and rotate/restrict the keys if needed.
-- The database schema is not included in the current repository. Export it from your existing `weather_app` database before provisioning production MySQL.
+- The database schema is not included in the current repository. Export it from your existing `weatherify` database before provisioning production MySQL.
 - Vercel's PHP runtime is a community runtime, not one of Vercel's official runtimes. Check the [runtime documentation](https://vercel.com/docs/functions/runtimes) and [PHP runtime project](https://github.com/vercel-community/php) if its configuration changes.
