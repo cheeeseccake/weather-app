@@ -108,7 +108,7 @@
             <p class="text-lg text-dark-sage/80 mb-6">Interactive Forecasts & Daily Challenges</p>
             
             <div class="flex justify-center items-center space-x-6 text-xl font-semibold">
-                <button onclick="window.location.href='index.php'" class="btn-bounce bg-sage hover:bg-dark-sage text-base font-bold py-2 px-4 rounded-lg flex items-center space-x-1">
+                <button onclick="window.location.href='/';" class="btn-bounce bg-sage hover:bg-dark-sage text-base font-bold py-2 px-4 rounded-lg flex items-center space-x-1">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
@@ -622,7 +622,7 @@
             }
 
             try {
-                const response = await fetch('../api/save_journal.php', {
+                const response = await fetch('/api/save_journal.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ entry: input.value.trim() })
