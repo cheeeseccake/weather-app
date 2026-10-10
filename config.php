@@ -12,9 +12,8 @@ class Database {
         $port = (int) (getenv('DB_PORT') ?: 3306);
         $user = getenv('DB_USER') ?: 'root';
         $password = getenv('DB_PASSWORD') ?: '';
-        $name = getenv('DB_NAME') ?: 'weather_app';
-
-        $this->conn = new mysqli($host, $user, $password, $name, $port);
+$name = getenv('DB_NAME') ?: 'weatherify';
+            $this->conn = new mysqli($host, $user, $password, $name, $port);
         if ($this->conn->connect_error) {
             error_log('Weather App database connection failed: ' . $this->conn->connect_error);
             throw new RuntimeException('Database connection unavailable.');
